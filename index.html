@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <section id="form-section" class="form-container">
+      <h2 class="form-title">Resume Builder By Mehma Rashid</h2>
+      <form id="resume-form" class="form">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="text" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" id="username" name="username" class="form-input" placeholder="Enter your username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="experience" class="form-label">Experience</label>
+          <textarea id="experience" name="experience" class="form-input" placeholder="e.g. Write your Professional Experience"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="education" class="form-label">Education</label>
+          <textarea id="education" name="education" class="form-input" placeholder="e.g. WRITE YOUR QUALIFICATION"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="skills" class="form-label">Skills</label>
+          <input type="text" id="skills" name="skills" class="form-input" placeholder="e.g. WRITE YOUR SKILLS" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Resume</button>
+      </form>
+    </section>
+
+<section id="generated-resume" class="hidden">
+    <header class="header" style="text-align: center;">
+      <h1 id="user-name">Your Name</h1>
+      <p class="contact-info">
+        Email: <span id="user-email">your.email@example.com</span> | Phone: <span id="user-phone">1234567890</span>
+      </p>
+    </header>
+  
+    <h2>Experience</h2>
+    <div id="user-experience"></div>
+  
+    <h2>Education</h2>
+    <div id="user-education"></div>
+  
+    <h2>Skills</h2>
+    <ul id="user-skills"></ul>
+  
+    <div class="button-container">
+      <button id="edit-resume">Edit Resume</button>
+      <button id="download-pdf">Download PDF</button>
+    </div>
+  </section>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
